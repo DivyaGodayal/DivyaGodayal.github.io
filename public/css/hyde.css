@@ -121,14 +121,28 @@ a.sidebar-nav-item:focus {
  * with a 25%-wide `.sidebar`.
  */
 
+.imageCaption {
+    text-align: center;
+    font-size: 0.7em;
+}
+
+.post-title{
+  text-align: left;
+}
+
+.section-divider{
+  display: none;
+}
+
 .content {
+  text-align: justify;
   padding-top:    4rem;
   padding-bottom: 4rem;
 }
 
 @media (min-width: 48em) {
   .content {
-    max-width: 38rem;
+    max-width: 45rem;
     margin-left: 20rem;
     margin-right: 2rem;
   }
