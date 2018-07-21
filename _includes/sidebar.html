@@ -1,12 +1,67 @@
 <div class="sidebar">
-  <div class="container sidebar-sticky">
+  <div class="sidebar-logo" style="align:center">
+        <img src="http://www.gravatar.com/avatar/{{ site.author.gravatar_md5 }}?s=350" />
+  </div>
+  <div id="contact-list1" style="text-align:center">
+    <!-- contact icons go here --> 
+    {% if site.author.github %}
+      <a href="https://github.com/{{ site.author.github }}">
+          <span class="fa-stack fa-medium">
+              <i class="fab fa-github fa-stack-2x"></i>
+          </span>
+      </a>
+    {% endif %}
+    {% if site.author.linkedin %}
+      <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">
+          <span class="fa-stack fa-medium">
+              <i class="fab fa-linkedin fa-stack-2x"></i>
+          </span>
+      </a>
+    {% endif %}
+    {% if site.author.medium %}
+      <a href="https://www.medium.com/@{{ site.author.medium }}">
+          <span class="fa-stack fa-medium">
+              <i class="fab fa-medium fa-stack-2x"></i>
+          </span>
+      </a>
+    {% endif %}
+    {% if site.author.instagram %}
+      <a href="https://www.instagram.com/{{ site.author.instagram }}">
+          <span class="fa-stack fa-medium">
+              <i class="fab fa-instagram fa-stack-2x"></i>
+          </span>
+      </a>
+    {% endif %}
+    {% if site.author.twitter %}
+      <a href="https://www.twitter.com/{{ site.author.twitter }}">
+          <span class="fa-stack fa-medium">
+              <i class="fab fa-twitter fa-stack-2x"></i>
+          </span>
+      </a>
+    {% endif %}
+    {% if site.author.smule %}
+      <a href="https://www.smule.com/{{ site.author.smule }}">
+         <span class="fa-stack fa-medium">
+            <i class="fas fa-music fa-stack-2x"></i>
+         </span>
+      </a>
+    {% endif %}
+    {% if site.author.facebook %}
+      <a href="https://www.facebook.com/{{ site.author.facebook }}">
+         <span class="fa-stack fa-medium">
+            <i class="fab fa-facebook-square fa-stack-2x"></i>
+         </span>
+      </a>
+    {% endif %}	
+  </div>
+  <div class="container">
     <div class="sidebar-about">
       <h1>
-        <a href="{{ site.baseurl }}">
+        <a class="name" href="{{ site.baseurl }}">
           {{ site.title }}
         </a>
-      </h1>
-      <p class="lead">{{ site.description }}</p>
+      </h1>  
+      <p class="me">{{ site.description }}</p>
     </div>
 
     <nav class="sidebar-nav">
@@ -25,8 +80,8 @@
           {% endif %}
         {% endif %}
       {% endfor %}
-
-      <a class="sidebar-nav-item" href="/poems/">Poems</a>
+      <a class="sidebar-nav-item" href="/poems/">Poems</a>	
+      <a class="sidebar-nav-item" href="{{ site.github.repo }}/assets/cv.pdf">CV</a>
       <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub project</a>
       <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
     </nav>

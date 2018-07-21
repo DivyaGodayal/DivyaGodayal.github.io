@@ -6,16 +6,22 @@ highlighter:      pygments
 permalink:        pretty
 
 # Setup
-title:            Hyde
+title:            Divya Godayal
 tagline:          'A Jekyll theme'
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+description:      'Coder | Drummer | Poet | Singer'
 url:              http://hyde.getpoole.com
 baseurl:          /
 poemsurl:         /poems/
 
 author:
-  name:           'Mark Otto'
+  name:           'Divya Godayal'
   url:            https://twitter.com/mdo
+  gravatar_md5:   2208002d2efae6ba2be8eff453c5b7f9
+  github:         DivyaGodayal
+  linkedin:       divyagodayal
+  smule:          __DivyaGodayal__  
+  medium:         divyagodayal        
+  facebook:       godayaldivya
 
 paginate:         5
 paginate_path: "/poems/page:num/"
