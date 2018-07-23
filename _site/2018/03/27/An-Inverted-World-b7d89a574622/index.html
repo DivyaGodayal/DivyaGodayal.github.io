@@ -36,7 +36,10 @@
 
   <body>
 
-    <div class="sidebar">
+    <script type="text/javascript" src="https://cdn.rawgit.com/tameemsafi/typewriterjs/master/typewriter.js" content-type= "application/javascript;charset=utf-8">
+</script>
+
+<div class="sidebar">
   <div class="sidebar-logo" style="align:center">
         <img src="http://www.gravatar.com/avatar/2208002d2efae6ba2be8eff453c5b7f9?s=350" />
   </div>
@@ -87,7 +90,7 @@
           Divya Godayal
         </a>
       </h1>  
-      <p class="me">Coder | Drummer | Poet | Singer</p>
+      <p class="me"><div id="app"></div></p>
     </div>
 
     <nav class="sidebar-nav">
@@ -98,12 +101,6 @@
       
       
         
-          
-        
-      
-        
-          
-            <a class="sidebar-nav-item" href="/about/">About</a>
           
         
       
@@ -144,6 +141,27 @@
     <p>&copy; 2018. All rights reserved.</p>
   </div>
 </div>
+
+<script type="text/javascript">
+var app = document.getElementById('app');
+
+var typewriter = new Typewriter(app, {
+    loop: true
+});
+
+typewriter.typeString('I am a Coder')
+    .pauseFor(2500)
+    .deleteChars(5)
+    .typeString('Drummer')
+    .pauseFor(2500)
+    .deleteChars(7)
+    .typeString('Poet')
+    .pauseFor(2500)
+    .deleteChars(4)
+    .typeString('Singer')
+    .pauseFor(2500)
+    .start();
+</script>
 
 
     <div class="content container">
