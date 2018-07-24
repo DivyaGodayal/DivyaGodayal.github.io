@@ -45,6 +45,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  background-color: #D3D3D3;
 }
 
 html {
@@ -58,9 +59,10 @@ html {
   }
 }
 
+
 body {
   color: #515151;
-  background-color: #fff;
+  background-color: #D3D3D3;;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
