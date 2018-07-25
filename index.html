@@ -49,182 +49,72 @@ title: Home
 }
 
 
-/* TIMELINE
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-.timeline {
-  white-space: nowrap;
-  overflow-x: hidden;
+
+/*Begin Project Section*/
+@font-face{font-family:'Calluna';
+ src:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/callunasansregular-webfont.woff') format('woff');
+}
+body {
+  background: url(//subtlepatterns.com/patterns/scribble_light.png);
+  font-family: Calluna, Arial, sans-serif;
+  min-height: 1000px;
+}
+#columns {
+  column-width: 320px;
+  column-gap: 15px;
+  width: 90%;
+  max-width: 1100px;
+  margin: 50px auto;
 }
 
-.timeline ol {
-  font-size: 0;
-  width: 100vw;
-  padding: 250px 0;
-  transition: all 1s;
-}
-
-.timeline ol li {
-  position: relative;
-  display: inline-block;
-  list-style-type: none;
-  width: 160px;
-  height: 3px;
-  background: #fff;
-}
-
-.timeline ol li:last-child {
-  width: 280px;
-}
-
-.timeline ol li:not(:first-child) {
-  margin-left: 14px;
-}
-
-.timeline ol li:not(:last-child)::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: calc(100% + 1px);
-  bottom: 0;
-  width: 12px;
-  height: 12px;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  background: #D3D3D3;
-}
-
-.timeline ol li div {
-  position: absolute;
-  left: calc(100% + 7px);
-  width: 280px;
+div#columns figure {
+  background: #fefefe;
+  border: 2px solid #fcfcfc;
+  box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+  margin: 0 2px 15px;
   padding: 15px;
+  padding-bottom: 10px;
+  transition: opacity .4s ease-in-out;
+  display: inline-block;
+  column-break-inside: avoid;
+}
+
+div#columns figure img {
+  width: 100%; height: auto;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+  margin-bottom: 5px;
+}
+
+div#columns figure figcaption {
+  font-size: .9rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+div#columns small { 
   font-size: 1rem;
-  white-space: normal;
-  color: black;
-  background: white;
+  float: right; 
+  text-transform: uppercase;
+  color: #aaa;
+} 
+
+div#columns small a { 
+  color: #666; 
+  text-decoration: none; 
+  transition: .4s color;
 }
 
-.timeline ol li div::before {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
+div#columns:hover figure:not(:hover) {
+  opacity: 0.4;
 }
 
-.timeline ol li:nth-child(odd) div {
-  top: -16px;
-  transform: translateY(-100%);
+@media screen and (max-width: 750px) { 
+  #columns { column-gap: 0px; }
+  #columns figure { width: 100%; }
 }
-
-.timeline ol li:nth-child(odd) div::before {
-  top: 100%;
-  border-width: 8px 8px 0 0;
-  border-color: white transparent transparent transparent;
-}
-
-.timeline ol li:nth-child(even) div {
-  top: calc(100% + 16px);
-}
-
-.timeline ol li:nth-child(even) div::before {
-  top: -8px;
-  border-width: 8px 0 0 8px;
-  border-color: transparent transparent transparent white;
-}
-
-.timeline time {
-  display: block;
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-
-
-/* TIMELINE ARROWS
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-.timeline .arrows {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.timeline .arrows .arrow__prev {
-  margin-right: 20px;
-}
-
-.timeline .disabled {
-  opacity: .5;
-}
-
-.timeline .arrows img {
-  width: 45px;
-  height: 45px;
-}
-
-
-/* GENERAL MEDIA QUERIES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-@media screen and (max-width: 599px) {
-  .timeline ol,
-  .timeline ol li {
-    width: auto; 
-  }
-  
-  .timeline ol {
-    padding: 0;
-    transform: none !important;
-  }
-  
-  .timeline ol li {
-    display: block;
-    height: auto;
-    background: transparent;
-  }
-  
-  .timeline ol li:first-child {
-    margin-top: 25px;
-  }
-  
-  .timeline ol li:not(:first-child) {
-    margin-left: auto;
-  }
-  
-  .timeline ol li div {
-    width: 94%;
-    height: auto !important;
-    margin: 0 auto 25px;
-  }
-  
-  .timeline ol li div {
-    position: static;
-  }
-  
-  .timeline ol li:nth-child(odd) div {
-    transform: none;
-  }
-  
-  .timeline ol li:nth-child(odd) div::before,
-  .timeline ol li:nth-child(even) div::before {
-    left: 50%;
-    top: 100%;
-    transform: translateX(-50%);
-    border: none;
-    border-left: 1px solid white;
-    height: 25px;
-  }
-  
-  .timeline ol li:last-child,
-  .timeline ol li:nth-last-child(2) div::before,
-  .timeline ol li:not(:last-child)::after,
-  .timeline .arrows {
-    display: none;
-  }
-}
+/*End Project Section*/
 </style>
 </head>
 <body class="body-class">
@@ -237,79 +127,126 @@ title: Home
 
 <section class="timeline">
   <ol>
-    <li>
+    <li style="width:0px;">
       <div>
-        <time>1934</time> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+        <p class="heading">
+          <img class="logo" src="/AMI.png">
+          Software Developer Intern
+        </p>
+        <p class="company-name">AMI, USC</p>
+        <p class="timeline-date">2018 - Present</p>
+        <p class="timeline-content">
+            Developing IOS app.asfabfmnbfasbfmasbfmnabmsfmnasbfmnabfmansbfmnasbfmnasbfmnas
+        </p>
       </div>
     </li>
+    
     <li>
       <div>
-        <time>1937</time> Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi. Suspendisse finibus mauris et bibendum molestie. Aenean ex augue, varius et pulvinar in, pretium non nisi.
+        <p class="heading">
+          <img class="logo" src="/google.png">
+          Systems Engineer
+        </p>
+        <p class="company-name">Google</p>
+        <p class="timeline-date">2018 - Present</p>
+        <p class="timeline-content">
+            Developing High level concurrent applications at Google's Cloud Services.
+        </p>
       </div>
     </li>
+
     <li>
       <div>
-        <time>1940</time> Proin iaculis, nibh eget efficitur varius, libero tellus porta dolor, at pulvinar tortor ex eget ligula. Integer eu dapibus arcu, sit amet sollicitudin eros.
+        <p class="heading">
+          <img class="logo" src="/google.png">
+          Systems Engineer
+        </p>
+        <p class="company-name">Google</p>
+        <p class="timeline-date">2018 - Present</p>
+        <p class="timeline-content">
+            Developing High level concurrent applications at Google's Cloud Services.
+        </p>
       </div>
     </li>
+
     <li>
       <div>
-        <time>1943</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+        <p class="heading">
+          <img class="logo" src="/google.png">
+          Systems Engineer
+        </p>
+        <p class="company-name">Google</p>
+        <p class="timeline-date">2018 - Present</p>
+        <p class="timeline-content">
+            Developing High level concurrent applications at Google's Cloud Services.
+        </p>
       </div>
     </li>
-    <li>
-      <div>
-        <time>1946</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
-      </div>
-    </li>
-    <li>
-      <div>
-        <time>1956</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
-      </div>
-    </li>
-    <li>
-      <div>
-        <time>1957</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
-      </div>
-    </li>
-    <li>
-      <div>
-        <time>1967</time> Aenean condimentum odio a bibendum rhoncus. Ut mauris felis, volutpat eget porta faucibus, euismod quis ante.
-      </div>
-    </li>
-    <li>
-      <div>
-        <time>1977</time> Vestibulum porttitor lorem sed pharetra dignissim. Nulla maximus, dui a tristique iaculis, quam dolor convallis enim, non dignissim ligula ipsum a turpis.
-      </div>
-    </li>
-    <li>
-      <div>
-        <time>1985</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
-      </div>
-    </li>
-    <li>
-      <div>
-        <time>2000</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
-      </div>
-    </li>
-    <li>
-      <div>
-        <time>2005</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
-      </div>
-    </li>
+
     <li></li>
+  
   </ol>
   
   <div class="arrows">
     <button class="arrow arrow__prev disabled" disabled>
       <i class="fas fa-arrow-circle-left fa-5x"></i>
     </button>
-    <button class="arrow arrow__next">
+    <button class="arrow arrow__next disabled">
       <i class="fas fa-arrow-circle-right fa-5x"></i>
     </button>
   </div>
 </section>
 
+
+<!-- Begin Project Section -->
+<div id="columns">
+  <figure>
+  <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/cinderella.jpg">
+  <figcaption>Cinderella wearing European fashion of the mid-1860’s</figcaption>
+  </figure>
+  
+  <figure>
+  <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/rapunzel.jpg">
+  <figcaption>Rapunzel, clothed in 1820’s period fashion</figcaption>
+  </figure>
+  
+  <figure>
+  <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/belle.jpg">
+  <figcaption>Belle, based on 1770’s French court fashion</figcaption>
+  </figure>
+  
+  <figure>
+  <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/mulan_2.jpg">
+  <figcaption>Mulan, based on the Ming Dynasty period</figcaption>
+  </figure>
+  
+   <figure>
+   <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/sleeping-beauty.jpg">
+  <figcaption>Sleeping Beauty, based on European fashions in 1485</figcaption>
+  </figure>
+  
+   <figure>
+   <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/pocahontas_2.jpg">
+  <figcaption>Pocahontas based on 17th century Powhatan costume</figcaption>
+  </figure>
+  
+  <figure>
+  <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/snow-white.jpg">
+  <figcaption>Snow White, based on 16th century German fashion</figcaption>
+  </figure> 
+  
+   <figure>
+  <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/ariel.jpg">
+  <figcaption>Ariel wearing an evening gown of the 1890’s</figcaption>
+  </figure>
+  
+    <figure>
+  <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/tiana.jpg">
+    <figcaption>Tiana wearing the <i>robe de style</i> of the 1920’s</figcaption>
+  </figure> 
+  <small>Art &copy; <a href="//clairehummel.com">Claire Hummel</a></small>
+  </div>
+<!-- End Project Section  -->
 </body>
 <script>
   (function() {
@@ -322,17 +259,28 @@ title: Home
     arrowNext = document.querySelector(".timeline .arrows .arrow__next"),
     firstItem = document.querySelector(".timeline li:first-child"),
     lastItem = document.querySelector(".timeline li:last-child"),
+    timeline_box = document.querySelector(".timeline")
     xScrolling = 280,
     disabledClass = "disabled";
 
   // START
   window.addEventListener("load", init);
 
+  function offset(el) {
+    var rect = el.getBoundingClientRect(),
+    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+}
+
   function init() {
     setEqualHeights(elH);
     animateTl(xScrolling, arrows, timeline);
     setSwipeFn(timeline, arrowPrev, arrowNext);
     setKeyboardFn(arrowPrev, arrowNext);
+    timeline_offset = offset(timeline_box);
+    isElementInViewport(firstItem, timeline_offset.top, timeline_offset.left) ? setBtnState(arrowPrev) : setBtnState(arrowPrev, false);
+    isElementInViewport(lastItem, timeline_offset.top, timeline_offset.left) ? setBtnState(arrowNext) : setBtnState(arrowNext, false);
   }
 
   // SET EQUAL HEIGHTS
@@ -353,11 +301,13 @@ title: Home
 
   // CHECK IF AN ELEMENT IS IN VIEWPORT
   // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
-  function isElementInViewport(el) {
+  function isElementInViewport(el, starting_top, starting_left) {
     const rect = el.getBoundingClientRect();
+    console.log(rect, starting_top, starting_left, window.innerHeight, window.innerWidth, document.documentElement.clientHeight, 
+      document.documentElement.clientWidth);
     return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
+      rect.top >= starting_top &&
+      rect.left >= starting_left &&
       rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
       rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
@@ -365,6 +315,7 @@ title: Home
 
   // SET STATE OF PREV/NEXT ARROWS
   function setBtnState(el, flag = true) {
+    console.log(el, flag);
     if (flag) {
       el.classList.add(disabledClass);
     } else {
@@ -397,9 +348,10 @@ title: Home
           tl.style.transform = `translateX(${values}px)`;
         }
 
+        timeline_offset = offset(timeline_box);
         setTimeout(() => {
-          isElementInViewport(firstItem) ? setBtnState(arrowPrev) : setBtnState(arrowPrev, false);
-          isElementInViewport(lastItem) ? setBtnState(arrowNext) : setBtnState(arrowNext, false);
+          isElementInViewport(firstItem, timeline_offset.top, timeline_offset.left) ? setBtnState(arrowPrev) : setBtnState(arrowPrev, false);
+          isElementInViewport(lastItem, timeline_offset.top, timeline_offset.left) ? setBtnState(arrowNext) : setBtnState(arrowNext, false);
         }, 1100);
 
         counter++;
