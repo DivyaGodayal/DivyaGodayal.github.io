@@ -19,6 +19,8 @@
 
   <!-- CSS -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+  <script type="text/javascript" src="/public/js/custom.js"></script>
   <link rel="stylesheet" href="/public/css/custom.css">
   <link rel="stylesheet" href="/public/css/poole.css">
   <link rel="stylesheet" href="/public/css/syntax.css">
@@ -105,6 +107,12 @@
         
       
         
+          
+            <a class="sidebar-nav-item" href="/DND/">Do Not Disturb</a>
+          
+        
+      
+        
       
         
           
@@ -167,153 +175,54 @@ typewriter.typeString('I am a Coder')
     <div class="content container">
       <!DOCTYPE html>
 <html>
-<head>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.arrow {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  color: #080808;
-  margin-top: 50px;
-}
-
-
-/* .section SECTION
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-.section {
-  padding: 10px 0;
-}
-
-.section .timeline-container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.section h1 {
-  font-size: 2.5rem;
-}
-
-.section h2 {
-  font-size: 1.3rem;
-}
-
-
-
-
-/*Begin Project Section*/
-@font-face{font-family:'Calluna';
- src:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/callunasansregular-webfont.woff') format('woff');
-}
-body {
-  background: url(//subtlepatterns.com/patterns/scribble_light.png);
-  font-family: Calluna, Arial, sans-serif;
-  min-height: 1000px;
-}
-#columns {
-  column-width: 320px;
-  column-gap: 15px;
-  width: 90%;
-  max-width: 1100px;
-  margin: 50px auto;
-}
-
-div#columns figure {
-  background: #fefefe;
-  border: 2px solid #fcfcfc;
-  box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
-  margin: 0 2px 15px;
-  padding: 15px;
-  padding-bottom: 10px;
-  transition: opacity .4s ease-in-out;
-  display: inline-block;
-  column-break-inside: avoid;
-}
-
-div#columns figure img {
-  width: 100%; height: auto;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 15px;
-  margin-bottom: 5px;
-}
-
-div#columns figure figcaption {
-  font-size: .9rem;
-  color: #444;
-  line-height: 1.5;
-}
-
-div#columns small { 
-  font-size: 1rem;
-  float: right; 
-  text-transform: uppercase;
-  color: #aaa;
-} 
-
-div#columns small a { 
-  color: #666; 
-  text-decoration: none; 
-  transition: .4s color;
-}
-
-div#columns:hover figure:not(:hover) {
-  opacity: 0.4;
-}
-
-@media screen and (max-width: 750px) { 
-  #columns { column-gap: 0px; }
-  #columns figure { width: 100%; }
-}
-/*End Project Section*/
-</style>
-</head>
 <body class="body-class">
 
 <section class="section intro">
   <div class="timeline-container">
-    <h1>Experience Timeline &rarr;</h1>
+    <h1 style="font-weight: 200; text-align: right; color: #808080; font-size: 1.5rem;">Experience Timeline</h1>
   </div>
 </section>
 
 <section class="timeline">
   <ol>
-    <li style="width:0px;">
-      <div>
+    <li style="width: 0rem" id="first-li-element">
+      <div class="odd">
         <p class="heading">
-          <img class="logo" src="/AMI.png">
+          <img class="logo" src="/public/assets/AMI.png">
           Software Developer Intern
         </p>
         <p class="company-name">AMI, USC</p>
-        <p class="timeline-date">2018 - Present</p>
+        <p class="timeline-date">Apr 2018 - Present</p>
         <p class="timeline-content">
-            Developing IOS app.asfabfmnbfasbfmasbfmnabmsfmnasbfmnabfmansbfmnasbfmnasbfmnas
+            Developed an iOS plugin using PhoneGap and integrated it with Onsen UI front end. The app uses plotly to display the processed spectral data. 
         </p>
-      </div>
+      </div> 
     </li>
     
     <li>
       <div>
         <p class="heading">
-          <img class="logo" src="/google.png">
-          Systems Engineer
+          <img class="logo" src="/public/assets/grader.jpeg">
+          Course Grader
         </p>
-        <p class="company-name">Google</p>
-        <p class="timeline-date">2018 - Present</p>
+        <p class="company-name">USC Viterbi School of Engg.</p>
+        <p class="timeline-date">Jan 2018 - Apr 2018</p>
         <p class="timeline-content">
-            Developing High level concurrent applications at Google's Cloud Services.
+            CSCI 104: Data Structures and Object Oriented Design by Professor Sandra Batista & Professor Aaron Cote(Spring-2018)
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <div class="odd">
+        <p class="heading">
+          <img class="logo" src="/public/assets/kiota.png">
+          Senior Software Engineer
+        </p>
+        <p class="company-name">Kiota Labs Private Limited</p>
+        <p class="timeline-date">Apr 2015 - Jun 2017</p>
+        <p class="timeline-content">
+            Led a team of developers to implement an end-to-end food delivery platform hosted on Cloud. Conceptualized and designed several features of the platform. 
         </p>
       </div>
     </li>
@@ -321,13 +230,29 @@ div#columns:hover figure:not(:hover) {
     <li>
       <div>
         <p class="heading">
-          <img class="logo" src="/google.png">
-          Systems Engineer
+          <img class="logo" src="/public/assets/bitcot.png">
+          Senior Software Engineer
         </p>
-        <p class="company-name">Google</p>
-        <p class="timeline-date">2018 - Present</p>
+        <p class="company-name">BitCot Inc.</p>
+        <p class="timeline-date">Oct 2014 - Mar 2015</p>
         <p class="timeline-content">
-            Developing High level concurrent applications at Google's Cloud Services.
+            Conceptualized, designed and implemented iOS native applications:
+            1. Do Not Disturb based on custom profiles and locations.
+            2. Track to for SMBs.
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <div class="odd">
+        <p class="heading">
+          <img class="logo" src="/public/assets/infosys.png">
+          Senior Systems Engineer
+        </p>
+        <p class="company-name">Infosys</p>
+        <p class="timeline-date">Apr 2014 - Sep 2014</p>
+        <p class="timeline-content">        
+          Migrating checkout functionality on Nordstrom's e-commerce website to use the Restful Apis. 
         </p>
       </div>
     </li>
@@ -335,13 +260,13 @@ div#columns:hover figure:not(:hover) {
     <li>
       <div>
         <p class="heading">
-          <img class="logo" src="/google.png">
+          <img class="logo" src="/public/assets/infosys.png">
           Systems Engineer
         </p>
-        <p class="company-name">Google</p>
-        <p class="timeline-date">2018 - Present</p>
-        <p class="timeline-content">
-            Developing High level concurrent applications at Google's Cloud Services.
+        <p class="company-name">Infosys</p>
+        <p class="timeline-date">Oct 2011 - Mar 2014</p>
+        <p class="timeline-content">        
+          Feature changes on Nordstrom's e-commerce website, mainly on product page.
         </p>
       </div>
     </li>
@@ -362,193 +287,135 @@ div#columns:hover figure:not(:hover) {
 
 
 <!-- Begin Project Section -->
-<div id="columns">
-  <figure>
-  <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/cinderella.jpg">
-  <figcaption>Cinderella wearing European fashion of the mid-1860’s</figcaption>
-  </figure>
-  
-  <figure>
-  <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/rapunzel.jpg">
-  <figcaption>Rapunzel, clothed in 1820’s period fashion</figcaption>
-  </figure>
-  
-  <figure>
-  <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/belle.jpg">
-  <figcaption>Belle, based on 1770’s French court fashion</figcaption>
-  </figure>
-  
-  <figure>
-  <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/mulan_2.jpg">
-  <figcaption>Mulan, based on the Ming Dynasty period</figcaption>
-  </figure>
-  
-   <figure>
-   <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/sleeping-beauty.jpg">
-  <figcaption>Sleeping Beauty, based on European fashions in 1485</figcaption>
-  </figure>
-  
-   <figure>
-   <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/pocahontas_2.jpg">
-  <figcaption>Pocahontas based on 17th century Powhatan costume</figcaption>
-  </figure>
-  
-  <figure>
-  <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/snow-white.jpg">
-  <figcaption>Snow White, based on 16th century German fashion</figcaption>
-  </figure> 
-  
-   <figure>
-  <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/ariel.jpg">
-  <figcaption>Ariel wearing an evening gown of the 1890’s</figcaption>
-  </figure>
-  
-    <figure>
-  <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/tiana.jpg">
-    <figcaption>Tiana wearing the <i>robe de style</i> of the 1920’s</figcaption>
-  </figure> 
-  <small>Art &copy; <a href="//clairehummel.com">Claire Hummel</a></small>
-  </div>
-<!-- End Project Section  -->
+<div class="projects">
+    <h1>Projects</h1>
+    
+    <div class="left">
+        
+        <!-- Coderchef Kitchen  -->
+        <div class="card">
+            <a href="https://github.com/DivyaGodayal/CoderChef-Kitchen">
+                <div class="card-image">
+                    <img src="/public/assets/coffee-to-code.png"
+                    alt="Orange" />
+                </div>
+            </a>
+            <div class="card-body">
+                <div class="card-title">
+                    <h3>
+                        Coderchef Kitchen
+                    </h3>
+                    <time>
+                        Feb, 2018 - Present
+                    </time>
+                </div>
+                <div class="card-exceprt">
+                    <p>
+                        Founder and Maintainer at Coderchef Kitchen which is an actively 
+                        growing repository of amazing programming problems with well commented 
+                        solutions and beautiful diagramatic explanations in the form of blog posts. 
+                        Multiple solutions for the same problem are implemented at times. 
+                    </p>
+                </div>
+                <a class="btn" href="https://github.com/DivyaGodayal/CoderChef-Kitchen">Github</a>
+            </div>
+        </div>
+        
+        <!-- Baby Lizards  -->
+        <div class="card">
+            <a href="https://github.com/DivyaGodayal/baby-lizard-keeper-nqueens">
+                <div class="card-image">
+                    <img src="/public/assets/baby-lizards.png"
+                    alt="Orange" />
+                </div>
+            </a>
+            <div class="card-body">
+                <div class="card-title">
+                    <h3>
+                        Baby Lizards Solver, a fun variant of N-Queens
+                    </h3>
+                    <time>
+                        August 2017
+                    </time>
+                </div>
+                <div class="card-exceprt">
+                    <p>
+                        Designed and Implemented a solution for the Baby Lizards problem which is basically 
+                        N-Queens problem but with obstacles in the form of Trees. The algorithm succesfully solves
+                        a test case for placing 97000 queens on 1000-by-1000 board under 2 seconds.
+                    </p>
+                </div>
+                <a class="btn" href="https://github.com/DivyaGodayal/baby-lizard-keeper-nqueens">Github</a>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="right">
+        
+        <!-- Hidden Markov Model based Part-of-Speech Tagger  -->
+        <div class="card">
+            <a href="https://github.com/DivyaGodayal/HMM-POS-Tagger">
+                <div class="card-image">
+                    <img src="/public/assets/pos-tagger.png"
+                    alt="Orange" />
+                </div>
+            </a>
+            <div class="card-body">
+                <div class="card-title">
+                    <h3>
+                        Hidden Markov Model based Part-of-Speech Tagger 
+                    </h3>
+                    <time>
+                        Feb 2018
+                    </time>
+                </div>
+
+                <div class="card-exceprt">
+                    <p>
+                        Used Trigram Hidden Markov Models and the Viterbi Algorithm 
+                        to build a Part-of-Speech Tagger.The tagger was able to get a mean F1 score of 0.91 on the provided dataset. 
+                        Used Python for programming the tagger and NLTK for tokenization. 
+                    </p>
+                </div>
+                <a class="btn" href="https://github.com/DivyaGodayal/HMM-POS-Tagger">Github</a>
+                <a class="btn" href="https://medium.freecodecamp.org/an-introduction-to-part-of-speech-tagging-and-the-hidden-markov-model-953d45338f24">Blog-1</a>
+                <a class="btn" href="https://medium.freecodecamp.org/a-deep-dive-into-part-of-speech-tagging-using-viterbi-algorithm-17c8de32e8bc">Blog-2</a>
+            </div>
+        </div>
+        
+        <!-- Portfolio Website  -->
+        <div class="card">
+            <a href="http://DG.github.io/">
+                <div class="card-image">
+                    <img src="public/assets/portfolio-website.png"
+                    alt="Orange" />
+                </div>
+            </a>
+            <div class="card-body">
+                <div class="card-title">
+                    <h3>
+                        Portfolio Website
+                    </h3>
+                    <time>
+                        July 2018
+                    </time>
+                </div>
+                <div class="card-exceprt">
+                    <p>
+                        Developed a personal portfolio website using Jekyll and Github pages. Added a lot of 
+                        add on features including the Hyde theme, Google Analytics, Dyscus comments, 
+                        project cards, experience timeline etc. 
+                    </p>
+                </div>
+                <a class="btn" href="http://DG.github.io/">Github</a>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
 </body>
-<script>
-  (function() {
-
-  // VARIABLES
-  const timeline = document.querySelector(".timeline ol"),
-    elH = document.querySelectorAll(".timeline li > div"),
-    arrows = document.querySelectorAll(".timeline .arrows .arrow"),
-    arrowPrev = document.querySelector(".timeline .arrows .arrow__prev"),
-    arrowNext = document.querySelector(".timeline .arrows .arrow__next"),
-    firstItem = document.querySelector(".timeline li:first-child"),
-    lastItem = document.querySelector(".timeline li:last-child"),
-    timeline_box = document.querySelector(".timeline")
-    xScrolling = 280,
-    disabledClass = "disabled";
-
-  // START
-  window.addEventListener("load", init);
-
-  function offset(el) {
-    var rect = el.getBoundingClientRect(),
-    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
-}
-
-  function init() {
-    setEqualHeights(elH);
-    animateTl(xScrolling, arrows, timeline);
-    setSwipeFn(timeline, arrowPrev, arrowNext);
-    setKeyboardFn(arrowPrev, arrowNext);
-    timeline_offset = offset(timeline_box);
-    isElementInViewport(firstItem, timeline_offset.top, timeline_offset.left) ? setBtnState(arrowPrev) : setBtnState(arrowPrev, false);
-    isElementInViewport(lastItem, timeline_offset.top, timeline_offset.left) ? setBtnState(arrowNext) : setBtnState(arrowNext, false);
-  }
-
-  // SET EQUAL HEIGHTS
-  function setEqualHeights(el) {
-    let counter = 0;
-    for (let i = 0; i < el.length; i++) {
-      const singleHeight = el[i].offsetHeight;
-
-      if (counter < singleHeight) {
-        counter = singleHeight;
-      }
-    }
-
-    for (let i = 0; i < el.length; i++) {
-      el[i].style.height = `${counter}px`;
-    }
-  }
-
-  // CHECK IF AN ELEMENT IS IN VIEWPORT
-  // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
-  function isElementInViewport(el, starting_top, starting_left) {
-    const rect = el.getBoundingClientRect();
-    console.log(rect, starting_top, starting_left, window.innerHeight, window.innerWidth, document.documentElement.clientHeight, 
-      document.documentElement.clientWidth);
-    return (
-      rect.top >= starting_top &&
-      rect.left >= starting_left &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-  }
-
-  // SET STATE OF PREV/NEXT ARROWS
-  function setBtnState(el, flag = true) {
-    console.log(el, flag);
-    if (flag) {
-      el.classList.add(disabledClass);
-    } else {
-      if (el.classList.contains(disabledClass)) {
-        el.classList.remove(disabledClass);
-      }
-      el.disabled = false;
-    }
-  }
-
-  // ANIMATE TIMELINE
-  function animateTl(scrolling, el, tl) {
-    let counter = 0;
-    for (let i = 0; i < el.length; i++) {
-      el[i].addEventListener("click", function() {
-        if (!arrowPrev.disabled) {
-          arrowPrev.disabled = true;
-        }
-        if (!arrowNext.disabled) {
-          arrowNext.disabled = true;
-        }
-        const sign = (this.classList.contains("arrow__prev")) ? "" : "-";
-        if (counter === 0) {
-          tl.style.transform = `translateX(-${scrolling}px)`;
-        } else {
-          const tlStyle = getComputedStyle(tl);
-          // add more browser prefixes if needed here
-          const tlTransform = tlStyle.getPropertyValue("-webkit-transform") || tlStyle.getPropertyValue("transform");
-          const values = parseInt(tlTransform.split(",")[4]) + parseInt(`${sign}${scrolling}`);
-          tl.style.transform = `translateX(${values}px)`;
-        }
-
-        timeline_offset = offset(timeline_box);
-        setTimeout(() => {
-          isElementInViewport(firstItem, timeline_offset.top, timeline_offset.left) ? setBtnState(arrowPrev) : setBtnState(arrowPrev, false);
-          isElementInViewport(lastItem, timeline_offset.top, timeline_offset.left) ? setBtnState(arrowNext) : setBtnState(arrowNext, false);
-        }, 1100);
-
-        counter++;
-      });
-    }
-  }
-
-  // ADD SWIPE SUPPORT FOR TOUCH DEVICES
-  function setSwipeFn(tl, prev, next) {
-    const hammer = new Hammer(tl);
-    hammer.on("swipeleft", () => next.click());
-    hammer.on("swiperight", () => prev.click());
-  }
-
-  // ADD BASIC KEYBOARD FUNCTIONALITY
-  function setKeyboardFn(prev, next) {
-    document.addEventListener("keydown", (e) => {
-      if ((e.which === 37) || (e.which === 39)) {
-        const timelineOfTop = timeline.offsetTop;
-        const y = window.pageYOffset;
-        if (timelineOfTop !== y) {
-          window.scrollTo(0, timelineOfTop);
-        }
-        if (e.which === 37) {
-          prev.click();
-        } else if (e.which === 39) {
-          next.click();
-        }
-      }
-    });
-  }
-
-})();
-</script>
 </html>
 
     </div>
