@@ -23,13 +23,25 @@
 }
 
   function init() {
+    left_count = 0;
+    right_count = 3;
     setEqualHeights(elH);
     animateTl(xScrolling, arrows, timeline);
     setSwipeFn(timeline, arrowPrev, arrowNext);
     setKeyboardFn(arrowPrev, arrowNext);
-    timeline_offset = offset(timeline_box);
-    isElementInViewport(firstItem, timeline_offset.top, timeline_offset.left) ? setBtnState(arrowPrev) : setBtnState(arrowPrev, false);
-    isElementInViewport(lastItem, timeline_offset.top, timeline_offset.left) ? setBtnState(arrowNext) : setBtnState(arrowNext, false);
+    if(left_count == 0) {
+      setBtnState(arrowPrev) 
+    } 
+    else{
+       setBtnState(arrowPrev, false);
+    }
+
+    if(right_count == 0) {
+      setBtnState(arrowNext);
+    } 
+    else{
+       setBtnState(arrowNext, false);
+    }
   }
 
   // SET EQUAL HEIGHTS
@@ -52,8 +64,6 @@
   // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
   function isElementInViewport(el, starting_top, starting_left) {
     const rect = el.getBoundingClientRect();
-    console.log(rect, starting_top, starting_left, window.innerHeight, window.innerWidth, document.documentElement.clientHeight, 
-      document.documentElement.clientWidth);
     return (
       rect.top >= starting_top &&
       rect.left >= starting_left &&
@@ -64,7 +74,6 @@
 
   // SET STATE OF PREV/NEXT ARROWS
   function setBtnState(el, flag = true) {
-    console.log(el, flag);
     if (flag) {
       el.classList.add(disabledClass);
     } else {
@@ -80,6 +89,14 @@
     let counter = 0;
     for (let i = 0; i < el.length; i++) {
       el[i].addEventListener("click", function() {
+        if(this.classList.contains("arrow__prev")){
+          left_count -= 1
+          right_count += 1
+        }
+        else{
+          left_count += 1
+          right_count -= 1
+        }
         if (!arrowPrev.disabled) {
           arrowPrev.disabled = true;
         }
@@ -96,12 +113,10 @@
           const values = parseInt(tlTransform.split(",")[4]) + parseInt(`${sign}${scrolling}`);
           tl.style.transform = `translateX(${values}px)`;
         }
-
-        timeline_offset = offset(timeline_box);
         setTimeout(() => {
-          isElementInViewport(firstItem, timeline_offset.top, timeline_offset.left) ? setBtnState(arrowPrev) : setBtnState(arrowPrev, false);
-          isElementInViewport(lastItem, timeline_offset.top, timeline_offset.left) ? setBtnState(arrowNext) : setBtnState(arrowNext, false);
-        }, 1100);
+          (left_count == 0) ? setBtnState(arrowPrev) : setBtnState(arrowPrev, false);
+          (right_count == 0) ? setBtnState(arrowNext) : setBtnState(arrowNext, false);
+        }, 500);
 
         counter++;
       });

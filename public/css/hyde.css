@@ -46,38 +46,38 @@ html {
 }
 @media (min-width: 960px) {
   html {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
 @media (min-width: 1248px) {
   html {
-    font-size: 16px;
+    font-size: 17px;
   }
 }
 @media (min-width: 1392px) {
   html {
-    font-size: 17.5px;
+    font-size: 20.5px;
   }
 }
 @media (min-width: 1632px) {
     html {
-        font-size: 19px;
+        font-size: 22px;
     }
 }
 @media (min-width: 1872px) {
     html {
-        font-size: 20.5px;
+        font-size: 24.5px;
     }
 }
 @media (min-width: 2112px) {
     html {
-        font-size: 23px;
+        font-size: 26.5px;
     }
 }
 @media (min-width: 2352px) {
     html {
-        font-size: 24.5px;
+        font-size: 29.5px;
     }
 }
 
