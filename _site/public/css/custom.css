@@ -14,8 +14,8 @@
    border-radius: 50%;
    -moz-border-radius: 50%;
    -webkit-border-radius: 50%;
- width: 10rem;
- margin: 0 auto;
+   width: 10rem;
+   margin: 0 auto;
  }
 
 
@@ -23,12 +23,34 @@
   padding: 10px 0;
 }
 
-.section h1 {
-  font-size: 2.5rem;
+.introduction{
+  text-align: center;
+}
+
+.resume-section h1 {
+  font-weight: lighter;
+  font-size: 1.5rem;
+  text-align: left;
+  color: white;
+  /*background-color: #505050;*/
+  background: linear-gradient(to right, #282828, #d3d3d3);
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+
+.section h1 div{
+  padding-left: 5px;
 }
 
 .section h2 {
   font-size: 1.3rem;
+}
+
+.sub-header{
+  font-size: 1.3rem;
+  font-weight: lighter;
+  color: #505050;
 }
 
 *,
@@ -48,6 +70,18 @@
   margin-top: 2em;
 }
 
+
+.aspectRatioPlaceholder.is-locked{
+  margin: auto;
+}
+
+.graf.graf--h3.graf-after--p {
+  font-size: 2em;
+}
+
+.graf.graf--h4.graf-after--p {
+  font-size: 1.5em;
+}
 
 /* Timeline section */
 /* TIMELINE
@@ -69,7 +103,6 @@
 	margin-top: 0.2em;
 	margin-bottom: 0em;
 	max-width: 100%;
-	font-weight: bold;
 	font-size: 1.2em;
 }
 
@@ -367,8 +400,57 @@
   box-shadow: 2px 2px 0 transparent;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1024px) {
     .left, .right {
         align-content: center;
         float: none;
 }
+
+}
+/*Skill section CSS*/
+
+/* Make sure that padding behaves as expected */
+* {box-sizing:border-box}
+
+/* Container for skill bars */
+.skill-container {
+    width: 100%; /* Full width */
+    margin-bottom: 6px;
+    background-color: #ddd;
+}
+
+.skills-text{
+  padding-left: 5px;
+}
+
+.skills { 
+    font-size: 17px;
+    padding-right: 20px; /* Add some right padding */
+    line-height: 18px; /* Set the line-height to center the text inside the skill bar, and to expand the height of the container */
+    color: white; /* White text color */
+}
+
+.language-c {width: 60%; background-color: #707070;} 
+.language-c-plus {width: 70%; background-color: #505050;} 
+.language-python {width: 80%; background-color: #505050;} 
+.language-c-sharp {width: 60%; background-color: #707070;} 
+.language-swift {width: 70%; background-color: #505050;}
+.language-java {width: 40%; background-color: #808080;} 
+.language-javascript {width: 50%; background-color: #808080;} 
+.angular {width: 20%; background-color: #A0A0A0;} 
+.jQuery {width: 40%; background-color: #808080;} 
+.dotnet {width: 50%; background-color: #808080;} 
+.framework-ios {width: 60%; background-color: #707070;} 
+.framework-phonegap {width: 50%; background-color: #808080;} 
+
+
+.quotation{
+  color: black;
+  font-family: "Courier New", Courier, monospace;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+  padding-bottom: 2.5em;
+  font-size: 1.5em;
+  text-align: center;
+}
+

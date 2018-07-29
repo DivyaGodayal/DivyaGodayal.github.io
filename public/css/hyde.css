@@ -40,7 +40,9 @@
  */
 
 html {
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: Helvetica, sans-serif, Arial;
+  font-size: 12px;
+  font-weight: lighter;
 }
 @media (min-width: 960px) {
   html {
@@ -93,7 +95,7 @@ html {
   color: rgba(255,255,255,.5);
   background-color: #202020;
 }
-@media (min-width: 960px) {
+@media (min-width: 900px) {
   .sidebar {
     position: fixed;
     top: 0;
@@ -113,8 +115,8 @@ html {
 .sidebar-about h1 {
   color: #fff;
   margin-top: 0;
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-  font-size: 3.00rem;
+  font-weight: lighter;
+  font-size: 3.5rem;
 }
 
 /* Sidebar nav */
@@ -162,6 +164,13 @@ a.sidebar-nav-item:focus {
 
 .post-title{
   text-align: left;
+  font-size: 2.5em;
+  font-weight: normal;
+}
+
+.page-title{
+  text-align: center;
+  font-weight: normal;
 }
 
 .section-divider{
@@ -174,6 +183,14 @@ a.sidebar-nav-item:focus {
   padding-bottom: 4rem;
 }
 
+@media (min-width: 900px) {
+  .content {
+    max-width: 53rem;
+    margin-left: 22rem;
+    margin-right: 2rem;
+  }
+}
+
 @media (min-width: 1152px) {
   .content {
     max-width: 53rem;
@@ -184,6 +201,7 @@ a.sidebar-nav-item:focus {
 
 @media (min-width: 1536px) {
   .content {
+    max-width: 53rem;
     margin-left: 22rem;
     margin-right: 4rem;
   }
