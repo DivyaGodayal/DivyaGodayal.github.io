@@ -384,7 +384,7 @@ tbody tr:nth-child(odd) th {
   overflow: hidden; /* clearfix */
   margin-left: -1rem;
   margin-right: -1rem;
-  font-family: "Helvetica Neue", Helvetica, sans-serif, Arial;
+  font-family: Helvetica, sans-serif, Arial;
   color: #ccc;
   text-align: center;
 }

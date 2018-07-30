@@ -6,5 +6,5 @@ The Website is built entirely using HTML, CSS, and Javascript.
 
 `Hope you like it! :)`
 
-![alt text](https://raw.githubusercontent.com/DivyaGodayal/DG.github.io/master/public/assets/profile-page.png)
+![alt text](https://raw.githubusercontent.com/DivyaGodayal/DivyaGodayal.github.io/master/public/assets/profile-page.png)
 
