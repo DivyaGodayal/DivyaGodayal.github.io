@@ -1,7 +1,7 @@
 
 <div class="sidebar">
   <div class="sidebar-logo" style="align:center">
-        <img src="http://www.gravatar.com/avatar/{{ site.author.gravatar_md5 }}?s=350" />
+        <img src="https://www.gravatar.com/avatar/{{ site.author.gravatar_md5 }}?s=350" />
   </div>
   <div id="contact-list1" style="text-align:center">
     <!-- contact icons go here --> 
@@ -81,9 +81,9 @@
           {% endif %}
         {% endif %}
       {% endfor %}
-      <a class="sidebar-nav-item" href="/technology/">Tech Blogs</a>
-      <a class="sidebar-nav-item" href="/poems/">Poems</a>	
-      <a target="_blank" class="sidebar-nav-item" href="{{ site.github.repo }}/assets/cv.pdf">Resume</a>
+      <a class="sidebar-nav-item{% if page.url == '/technology/' | relative_url %} active{% endif %}" href="/technology/">Tech Blogs</a>
+      <a class="sidebar-nav-item{% if page.url == '/poems/' | relative_url %} active{% endif %}" href="/poems/">Poems</a>	
+      <a target="_blank" class="sidebar-nav-item{% if page.url == '/assets/cv.pdf' | relative_url %} active{% endif %}" href="{{ site.github.repo }}/assets/cv.pdf">Resume</a>
     </nav>
 
     <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
