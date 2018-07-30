@@ -60,8 +60,6 @@
     }
   }
 
-  // CHECK IF AN ELEMENT IS IN VIEWPORT
-  // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
   function isElementInViewport(el, starting_top, starting_left) {
     const rect = el.getBoundingClientRect();
     return (

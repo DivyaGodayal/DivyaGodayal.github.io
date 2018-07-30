@@ -1,6 +1,6 @@
 # Dependencies
 markdown:         redcarpet
-highlighter:      pygments
+highlighter:      rouge
 
 # Permalinks
 permalink:        pretty
@@ -8,8 +8,7 @@ permalink:        pretty
 # Setup
 title:            Divya Godayal
 tagline:          'A Jekyll theme'
-url:              http://hyde.getpoole.com
-baseurl:          /
+url:              https://dg.github.io/
 poemsurl:         /poems/
 
 author:
@@ -27,9 +26,6 @@ paginate_path: "/poems/page:num/"
 
 # Custom vars
 version:          2.1.0
-
-github:
-  repo:           https://github.com/poole/hyde
 
 plugins: 
   - jekyll-paginate
