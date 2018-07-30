@@ -8,49 +8,49 @@
   <div id="contact-list1" style="text-align:center">
     <!-- contact icons go here --> 
     {% if site.author.github %}
-      <a href="https://github.com/{{ site.author.github }}">
+      <a href="https://github.com/{{ site.author.github }}" target="_blank">
           <span class="fa-stack fa-medium">
               <i class="fab fa-github fa-stack-2x"></i>
           </span>
       </a>
     {% endif %}
     {% if site.author.linkedin %}
-      <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">
+      <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" target="_blank">
           <span class="fa-stack fa-medium">
               <i class="fab fa-linkedin fa-stack-2x"></i>
           </span>
       </a>
     {% endif %}
     {% if site.author.medium %}
-      <a href="https://www.medium.com/@{{ site.author.medium }}">
+      <a href="https://www.medium.com/@{{ site.author.medium }}" target="_blank">
           <span class="fa-stack fa-medium">
               <i class="fab fa-medium fa-stack-2x"></i>
           </span>
       </a>
     {% endif %}
     {% if site.author.instagram %}
-      <a href="https://www.instagram.com/{{ site.author.instagram }}">
+      <a href="https://www.instagram.com/{{ site.author.instagram }}" target="_blank">
           <span class="fa-stack fa-medium">
               <i class="fab fa-instagram fa-stack-2x"></i>
           </span>
       </a>
     {% endif %}
     {% if site.author.twitter %}
-      <a href="https://www.twitter.com/{{ site.author.twitter }}">
+      <a href="https://www.twitter.com/{{ site.author.twitter }}" target="_blank">
           <span class="fa-stack fa-medium">
               <i class="fab fa-twitter fa-stack-2x"></i>
           </span>
       </a>
     {% endif %}
     {% if site.author.smule %}
-      <a href="https://www.smule.com/{{ site.author.smule }}">
+      <a href="https://www.smule.com/{{ site.author.smule }}" target="_blank">
          <span class="fa-stack fa-medium">
             <i class="fas fa-music fa-stack-2x"></i>
          </span>
       </a>
     {% endif %}
     {% if site.author.facebook %}
-      <a href="https://www.facebook.com/{{ site.author.facebook }}">
+      <a href="https://www.facebook.com/{{ site.author.facebook }}" target="_blank">
          <span class="fa-stack fa-medium">
             <i class="fab fa-facebook-square fa-stack-2x"></i>
          </span>
@@ -85,7 +85,7 @@
       {% endfor %}
       <a class="sidebar-nav-item" href="/technology/">Tech Blogs</a>
       <a class="sidebar-nav-item" href="/poems/">Poems</a>	
-      <a class="sidebar-nav-item" href="{{ site.github.repo }}/assets/cv.pdf">Resume</a>
+      <a target="_blank" class="sidebar-nav-item" href="{{ site.github.repo }}/assets/cv.pdf">Resume</a>
     </nav>
 
     <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>

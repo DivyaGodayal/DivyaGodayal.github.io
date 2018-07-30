@@ -436,19 +436,21 @@
     color: white; /* White text color */
 }
 
-.language-c {width: 60%; background-color: #707070;} 
-.language-c-plus {width: 70%; background-color: #505050;} 
+.language-c {width: 50%; background-color: #707070;} 
+.language-c-plus {width: 60%; background-color: #505050;} 
 .language-python {width: 80%; background-color: #505050;} 
-.language-c-sharp {width: 60%; background-color: #707070;} 
+.language-c-sharp {width: 50%; background-color: #707070;} 
 .language-swift {width: 70%; background-color: #505050;}
-.language-java {width: 40%; background-color: #808080;} 
+.language-java {width: 30%; background-color: #A0A0A0;} 
 .language-javascript {width: 50%; background-color: #808080;} 
 .angular {width: 20%; background-color: #A0A0A0;} 
 .jQuery {width: 40%; background-color: #808080;} 
 .dotnet {width: 50%; background-color: #808080;} 
 .framework-ios {width: 60%; background-color: #707070;} 
-.framework-phonegap {width: 50%; background-color: #808080;} 
-
+.framework-phonegap {width: 35%; background-color: #808080;} 
+.databases {width: 40%; background-color: #808080;} 
+.framework-tensor{width: 30%; background-color: #A0A0A0;}
+.htmlcss {width: 50%; background-color: #808080;}
 
 .quotation{
   color: black;
