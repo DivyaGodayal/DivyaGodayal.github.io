@@ -81,6 +81,9 @@
           {% endif %}
         {% endif %}
       {% endfor %}
+      <a class="sidebar-nav-item" style="text-decoration:none;" href="{{ '/' | relative_url }}#skill-section">&nbsp&nbsp&nbsp&nbsp- Skills</a>
+      <a class="sidebar-nav-item" style="text-decoration:none;" href="{{ '/' | relative_url }}#timeline-section">&nbsp&nbsp&nbsp&nbsp- Experience</a>
+      <a class="sidebar-nav-item" style="text-decoration:none;" href="{{ '/' | relative_url }}#projects-section">&nbsp&nbsp&nbsp&nbsp- Projects</a>
       <a class="sidebar-nav-item{% if page.url == '/technology/' | relative_url %} active{% endif %}" href="/technology/">Tech Blogs</a>
       <a class="sidebar-nav-item{% if page.url == '/poems/' | relative_url %} active{% endif %}" href="/poems/">Poems</a>	
       <a target="_blank" class="sidebar-nav-item{% if page.url == '/assets/cv.pdf' | relative_url %} active{% endif %}" href="{{ site.github.repo }}/public/assets/Resume-DivyaGodayal.pdf">Resume</a>
